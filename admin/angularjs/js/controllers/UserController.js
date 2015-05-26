@@ -79,7 +79,7 @@
 
     angular
         .module("userManagement")
-        .controller("UserAddController",UserAddContdroller);
+        .controller("UserAddController",UserAddController);
 
     function UserAddController($scope, $http, User){
 
