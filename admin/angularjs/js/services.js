@@ -57,18 +57,31 @@ angular.module('courseService', [])
 
         return {
             get: function(){
-                return $http.get('/api/courses'); //'/api/users'
+                return $http.get('http://192.168.1.183:8080/AES/api/coursemanagement/courses'); 
             },
-            save: function(userData){
+           view: function(id){
+                return $http.get('http://192.168.1.183:8080/AES/api/coursemanagement/courses/'+id);
+            },
+            save: function(courseData){
                 return $http({
                     method: 'POST',
-                    url: '/api/courses',
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    data: $.param(userData)
+                    dataType: 'json',
+                    url: 'http://192.168.1.183:8080/AES/api/coursemanagement/add',
+                    headers: {'Content-Type': 'application/json'}, //'application/x-www-form-urlencoded'
+                    data: JSON.stringify(courseData)
+                });
+            },
+            update: function(userData){
+                return $http({
+                    method: 'POST',
+                    dataType: 'json',
+                    url: 'http://192.168.1.183:8080/AES/api/coursemanagement/update',
+                    headers: {'Content-Type': 'application/json'}, //'application/x-www-form-urlencoded'
+                    data: JSON.stringify(userData)
                 });
             },
             destroy: function(id){
-                return $http.delete('/api/courses/'+ id);
+                return $http.get('http://192.168.1.183:8080/AES/api/coursemanagement/delete/'+ id);
             }
         };
     });

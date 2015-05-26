@@ -79,7 +79,7 @@
 
     angular
         .module("userManagement")
-        .controller("UserAddController",UserAddController);
+        .controller("UserAddController",UserAddContdroller);
 
     function UserAddController($scope, $http, User){
 
@@ -113,8 +113,4 @@
 
         };
     }
-
-
-
-
 }());
