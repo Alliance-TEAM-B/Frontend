@@ -13,12 +13,12 @@
         </li>
         <li>
             <i class="icon-notebook"></i>
-            Add Course
+            View Course
         </li>
     </ul>
 </div>
 <h3 class="page-title">
-    Name of Course
+    {{course.title}}
 </h3>
 <!-- END PAGE HEADER-->
 <!-- BEGIN MAIN CONTENT -->
@@ -41,16 +41,15 @@
                     </a>
                 </div>
             </div>
-            <div class="portlet-body form">
-                <!-- BEGIN FORM-->
+            <div class="portlet-body form" ng-controller="CourseController">
+                <!-- BEGIN CONTENT-->
                 <form action="#" class="horizontal-form">
                     <div class="form-body">
-                        <!--<h3 class="form-section">Person Info</h3>-->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Course Title</label>
-                                    <input type="text" id="username" class="form-control" placeholder="e.g. Project Management">
+                                    <div>{{course.title}}</div>
                                     <!--<span class="help-block">
                                     This is inline help </span>-->
                                 </div>
@@ -59,7 +58,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Course Description</label>
-                                    <textarea id="password" class="form-control" placeholder="e.g. Advanced course in Project Management" style="resize:none" rows="6"></textarea>
+                                    <div>{{course.description}}</div>
                                 </div>
                             </div>
                             <!--/span-->
@@ -67,12 +66,12 @@
 
 
                     </div>
-                    <div class="form-actions right">
+                    <!--<div class="form-actions right">
                         <button type="button" class="btn default">Cancel</button>
                         <button type="submit" class="btn red"><i class="fa fa-check"></i> Save</button>
-                    </div>
+                    </div>-->
                 </form>
-                <!-- END FORM-->
+                <!-- END CONTENT-->
             </div>
         </div>
 <!-- END MAIN CONTENT -->
