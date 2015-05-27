@@ -56,8 +56,9 @@
                         <td>{{course.title}}</td>
                         <td>{{course.description}}</td>
                         <td>
-                            <button class="btn green" ng-click="editCourse(course.id)">Edit</button>&nbsp;
-                            <button class="btn red" ng-click="deleteUser(course.id)">Delete</button>
+                            <button class="btn" ng-click="editCourse(course.id)">Edit</button>&nbsp;
+                            <button class="btn red" ng-click="deleteCourse(course.id)">Delete</button>&nbsp;
+			    <button class="btn green" ng-click="manageCourse(course.id)">Manage Trainees</button>
                         </td>
 
                     </tr>
