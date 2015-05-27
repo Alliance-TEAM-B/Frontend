@@ -1,0 +1,83 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <i class="icon-book-open"></i>
+            <a href="#/add_course">Courses</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <i class="icon-notebook"></i>
+            View Course
+        </li>
+    </ul>
+</div>
+<h3 class="page-title">
+    {{course.title}}
+</h3>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div ng-controller="DashboardController">
+
+    <div class="tab-pane" id="tab_1">
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon"></i>Course Information
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse">
+                    </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config">
+                    </a>
+                    <a href="javascript:;" class="reload">
+                    </a>
+                    <a href="javascript:;" class="remove">
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body form" ng-controller="CourseController">
+                <!-- BEGIN CONTENT-->
+                <form action="#" class="horizontal-form">
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label">Course Title</label>
+                                    <div>{{course.title}}</div>
+                                    <!--<span class="help-block">
+                                    This is inline help </span>-->
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label">Course Description</label>
+                                    <div>{{course.description}}</div>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+
+                    </div>
+                    <!--<div class="form-actions right">
+                        <button type="button" class="btn default">Cancel</button>
+                        <button type="submit" class="btn red"><i class="fa fa-check"></i> Save</button>
+                    </div>-->
+                </form>
+                <!-- END CONTENT-->
+            </div>
+        </div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS & CSS -->
+<script>
+    Index.init();
+    Tasks.initDashboardWidget();
+</script>
+<!-- BEGIN MAIN JS & CSS -->
