@@ -7,7 +7,7 @@
 (function(){
     "use strict";
     angular
-        .module("userManagement")
+        .module("LoginApp")
         .controller("LoginController",
         function($scope,$location){
             $scope.users = [
