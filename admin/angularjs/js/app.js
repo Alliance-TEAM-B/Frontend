@@ -293,24 +293,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                 }]
             }
         })
-        /*
-        .state('login', {
-            url: "/login",
-            templateUrl: "views/login.html",
-            data: {pageTitle: 'Login'},
-            controller: "LoginController",
-            resolve: {
-                deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                    return $ocLazyLoad.load([{
-                        name: 'MetronicApp',
-                        files: [
-                            'js/controllers/GeneralPageController.js'
-                        ]
-                    }]);
-                }]
-            }
-        })
-*/
+
 
         .state('addcourse', {
             url: "/add_course",
